@@ -1,0 +1,53 @@
+Name,Category,Price
+
+Sprite,Cold Drinks,35
+
+Soda,Cold Drinks,30
+
+Tea,Cold Drinks,20
+
+Hot Chocolate,Hot Drinks,40
+
+Black Tea,Hot Drinks,15
+
+Milk Tea,Hot Drinks,25
+
+Mocha,Black Coffee,80
+
+Doppio,Black Coffee,100
+
+Americano,Black Coffee,60
+
+Frappuccino,Milk Coffee,110
+
+Smoothie,Milk Coffee,70
+
+Caffe Misto,Milk Coffee,140
+
+Chicken Caesar Burger,Burger,130
+
+Buff Burger,Burger,100
+
+Ham Burger,Burger,80
+
+Pizza Marinara,Pizza,150
+
+Pizza margherita,Pizza,170
+
+Brown Mustard,Hotdog,110
+
+Grilled Chicken,Sandwich,140
+
+Classic Sandwich,Sandwich,95
+
+Chili Cheese,Fires,75
+
+French Fries,Fires,55
+
+Sugarcane,Juice,30
+
+Wheatgrass,Juice,35
+
+Grapeful,Juice,35
+
+Mango,Juice,35
