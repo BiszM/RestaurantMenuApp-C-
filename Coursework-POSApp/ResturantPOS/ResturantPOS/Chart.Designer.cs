@@ -42,24 +42,23 @@
             legend1.Name = "Legend1";
             this.pieChart.Legends.Add(legend1);
             this.pieChart.Location = new System.Drawing.Point(1, 1);
-            this.pieChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pieChart.Name = "pieChart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series1.Legend = "Legend1";
             series1.Name = "Price";
             this.pieChart.Series.Add(series1);
-            this.pieChart.Size = new System.Drawing.Size(963, 441);
+            this.pieChart.Size = new System.Drawing.Size(722, 358);
             this.pieChart.TabIndex = 0;
             this.pieChart.Text = "pieChart";
             // 
             // Chart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 449);
+            this.ClientSize = new System.Drawing.Size(722, 365);
             this.Controls.Add(this.pieChart);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Chart";
             this.Text = "pieChart";
             ((System.ComponentModel.ISupportInitialize)(this.pieChart)).EndInit();

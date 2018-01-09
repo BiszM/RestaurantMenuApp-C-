@@ -157,7 +157,6 @@
             // categoryBox
             // 
             this.categoryBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.categoryBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categoryBox.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.categoryBox.FormattingEnabled = true;
             this.categoryBox.Items.AddRange(new object[] {

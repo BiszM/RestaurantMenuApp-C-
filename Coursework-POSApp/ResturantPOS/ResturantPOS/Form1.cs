@@ -55,7 +55,7 @@ namespace ResturantPOS
                         true);
             nameTxt.Text = "";
             priceTxt.Text = "";
-            categoryTxt.SelectedIndex = -1;
+            categoryTxt.Text = "";
             this.row = 0;
             this.status = false;
         }
@@ -71,7 +71,6 @@ namespace ResturantPOS
                 {
                     dataGridView.Rows.RemoveAt(selectedRow);
                 }
-                MessageBox.Show("Record is removed.", "Delete Message");
             }
         }
 
@@ -91,32 +90,18 @@ namespace ResturantPOS
             }
         }
 
-        // opens a new form from messagebox event when cell is double clicked
-        // it gives option either to save file or update file
-        private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        // opens a new form from messagebox event when update button is clicked
+        private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            string name = Convert.ToString(dataGridView.Rows[e.RowIndex].Cells[0].Value);
-            string category = Convert.ToString(dataGridView.Rows[e.RowIndex].Cells[1].Value);
-            int price = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells[2].Value);
-
-            DialogResult dialogResult = MessageBox.Show("Choose \"Yes\" to sell \"No\" to update", "Do you want to sell or update this product?",
-                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
+            try
             {
+                int currentRow = dataGridView.CurrentRow.Index;
+                string name = dataGridView.Rows[currentRow].Cells[0].Value.ToString();
+                string category = dataGridView.Rows[currentRow].Cells[1].Value.ToString();
+                int price = Convert.ToInt32(dataGridView.Rows[currentRow].Cells[2].Value);
                 if (name != "" && name.Length > 0 && category != "" && price > 0)
                 {
-                    //use of delegate from update.cs file
-                    Update u = new Update();
-                    u.LoadData(name, category, price, "sell");
-                    u.IdentityUpated += new Update.IdentityHandler(SellRecord);
-                    u.ShowDialog();
-                }
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                if (name != "" && name.Length > 0 && category != "" && price > 0)
-                {
-                    this.row = e.RowIndex;
+                    this.row = currentRow;
                     Update u = new Update();
                     u.LoadData(name, category, price, "update");
                     u.IdentityUpated += new Update.IdentityHandler(UpdateRecord);
@@ -131,12 +116,41 @@ namespace ResturantPOS
                     }
                     u.ShowDialog();
                 }
+            
             }
-            else { }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No data are found");
+            }
+            
             dataGridView.Refresh();
             Console.WriteLine("refreshed");
         }
-
+        
+        // opens a new verification from messagebox event when sell button is clicked
+        private void sellBtn_Click(object sender, EventArgs e)
+        {
+            try{
+                int currentRow = dataGridView.CurrentRow.Index;
+                string name = dataGridView.Rows[currentRow].Cells[0].Value.ToString();
+                string category = dataGridView.Rows[currentRow].Cells[1].Value.ToString();
+                int price = Convert.ToInt32(dataGridView.Rows[currentRow].Cells[2].Value);
+                if (name != "" && name.Length > 0 && category != "" && price > 0)
+                {
+                    //use of delegate from update.cs file
+                    Update u = new Update();
+                    u.LoadData(name, category, price, "sell");
+                    u.IdentityUpated += new Update.IdentityHandler(SellRecord);
+                    u.ShowDialog();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No data are found");
+            }
+            
+        }
+        
         //use of delegete and event to update the data
         private void UpdateRecord(object sender, IdentityEventArgs ea)
         {
@@ -235,13 +249,17 @@ namespace ResturantPOS
                 int price = Convert.ToInt32(sellDataView.Rows[i].Cells[2].Value);
                 total = total + price;
             }
-            MessageBox.Show("Total Price:" + total);
+            MessageBox.Show("Total Price: Rs." + total);
         }
 
         //Clears the datagridview when clicked
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            Ctrl.ClearGridView(dataGridView);
+            DialogResult dialogResult = MessageBox.Show("Do you want to clear the data?","", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.OK)
+            {
+                Ctrl.ClearGridView(dataGridView);
+            }
         }
 
     }

@@ -69,3 +69,15 @@ C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\Coursework-POSApp\Resturant
 C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.csproj.CoreCompileInputs.cache
 C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.exe
 C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.pdb
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\bin\Debug\ResturantPOS.exe.config
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\bin\Debug\ResturantPOS.exe
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\bin\Debug\ResturantPOS.pdb
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.csprojResolveAssemblyReference.cache
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.Chart.resources
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.Form1.resources
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.Properties.Resources.resources
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.Update.resources
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.csproj.GenerateResource.Cache
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.csproj.CoreCompileInputs.cache
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.exe
+C:\Users\prith\Google Drive\Islington\Year 3\MenuApp\App\Coursework-POSApp\ResturantPOS\ResturantPOS\obj\Debug\ResturantPOS.pdb

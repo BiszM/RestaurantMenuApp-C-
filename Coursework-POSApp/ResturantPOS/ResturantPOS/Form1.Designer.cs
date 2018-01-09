@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.importBtn = new System.Windows.Forms.Button();
             this.nameTxt = new System.Windows.Forms.TextBox();
@@ -64,6 +65,8 @@
             this.totalBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.sellBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sellDataView)).BeginInit();
             this.SuspendLayout();
@@ -189,7 +192,6 @@
             // categoryTxt
             // 
             this.categoryTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.categoryTxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categoryTxt.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.categoryTxt.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryTxt.FormattingEnabled = true;
@@ -242,7 +244,6 @@
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(342, 162);
             this.dataGridView.TabIndex = 5;
-            this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             // 
             // name
             // 
@@ -381,7 +382,7 @@
             this.sortBox.Items.AddRange(new object[] {
             "item",
             "price"});
-            this.sortBox.Location = new System.Drawing.Point(461, 339);
+            this.sortBox.Location = new System.Drawing.Point(461, 376);
             this.sortBox.Name = "sortBox";
             this.sortBox.Size = new System.Drawing.Size(73, 26);
             this.sortBox.TabIndex = 6;
@@ -391,7 +392,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
-            this.label10.Location = new System.Drawing.Point(389, 342);
+            this.label10.Location = new System.Drawing.Point(389, 379);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 20);
             this.label10.TabIndex = 3;
@@ -403,7 +404,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
-            this.label12.Location = new System.Drawing.Point(556, 342);
+            this.label12.Location = new System.Drawing.Point(548, 379);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 20);
             this.label12.TabIndex = 3;
@@ -420,9 +421,9 @@
             this.orderBox.Items.AddRange(new object[] {
             "ascending",
             "descending"});
-            this.orderBox.Location = new System.Drawing.Point(645, 339);
+            this.orderBox.Location = new System.Drawing.Point(632, 376);
             this.orderBox.Name = "orderBox";
-            this.orderBox.Size = new System.Drawing.Size(84, 26);
+            this.orderBox.Size = new System.Drawing.Size(97, 26);
             this.orderBox.TabIndex = 7;
             // 
             // sortByBtn
@@ -432,7 +433,7 @@
             this.sortByBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sortByBtn.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sortByBtn.ForeColor = System.Drawing.Color.White;
-            this.sortByBtn.Location = new System.Drawing.Point(387, 371);
+            this.sortByBtn.Location = new System.Drawing.Point(387, 408);
             this.sortByBtn.Name = "sortByBtn";
             this.sortByBtn.Size = new System.Drawing.Size(342, 27);
             this.sortByBtn.TabIndex = 8;
@@ -477,11 +478,11 @@
             this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearBtn.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBtn.ForeColor = System.Drawing.Color.White;
-            this.clearBtn.Location = new System.Drawing.Point(387, 404);
+            this.clearBtn.Location = new System.Drawing.Point(632, 335);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(137, 27);
+            this.clearBtn.Size = new System.Drawing.Size(97, 27);
             this.clearBtn.TabIndex = 9;
-            this.clearBtn.Text = "Clear Menu Data";
+            this.clearBtn.Text = "Clear Data";
             this.clearBtn.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.clearBtn.UseVisualStyleBackColor = false;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
@@ -497,6 +498,38 @@
             this.label11.TabIndex = 9;
             this.label11.Text = "To calculate the total earning click";
             // 
+            // sellBtn
+            // 
+            this.sellBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(167)))));
+            this.sellBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sellBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.sellBtn.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellBtn.ForeColor = System.Drawing.Color.White;
+            this.sellBtn.Location = new System.Drawing.Point(387, 335);
+            this.sellBtn.Name = "sellBtn";
+            this.sellBtn.Size = new System.Drawing.Size(47, 27);
+            this.sellBtn.TabIndex = 9;
+            this.sellBtn.Text = "Sell";
+            this.sellBtn.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.sellBtn.UseVisualStyleBackColor = false;
+            this.sellBtn.Click += new System.EventHandler(this.sellBtn_Click);
+            // 
+            // UpdateBtn
+            // 
+            this.UpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(167)))));
+            this.UpdateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.UpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.ForeColor = System.Drawing.Color.White;
+            this.UpdateBtn.Location = new System.Drawing.Point(440, 335);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(69, 27);
+            this.UpdateBtn.TabIndex = 9;
+            this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,6 +537,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1175, 598);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.UpdateBtn);
+            this.Controls.Add(this.sellBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.totalBtn);
             this.Controls.Add(this.chartBtn);
@@ -528,12 +563,13 @@
             this.Controls.Add(this.priceTxt);
             this.Controls.Add(this.nameTxt);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1191, 637);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1191, 637);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Resturant Application";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sellDataView)).EndInit();
             this.ResumeLayout(false);
@@ -575,6 +611,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button sellBtn;
+        private System.Windows.Forms.Button UpdateBtn;
     }
 }
 

@@ -67,7 +67,7 @@ namespace ResturantPOS
 
             for (int i = 0; i < priceArrayList.Count; i++)
             {
-                if (OrderName.ToLower() == "ascending")
+                if (OrderName.ToLower() == "descending")
                 {
                     for (int j = 1; j < priceArrayList.Count; j++)
                     {
@@ -77,7 +77,7 @@ namespace ResturantPOS
                         }
                     }
                 }
-                else if (OrderName.ToLower() == "descending")
+                else if (OrderName.ToLower() == "ascending")
                 {
                     for (int j = 1; j < priceArrayList.Count; j++)
                     {
